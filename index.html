@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Thésaurap Generator</title>
+</head>
+<body>
+  <header class="header">
+    <h1 class="headerTitle">Thésaurap Generator (développé pour Ilona)</h1>
+  </header>
+  <div class="mainContainer">
+  <section class="informations">
+    <div class="informationsElement">
+      <h4 class="informationsTitle">Insérer l'image de fond</h4>
+      <input id="informationsImage" class="informationsImage" type="file" name="" value="">
+    </div>
+    <div class="informationsElement">
+      <h4 class="informationsTitle">Insérer le type de contenu</h4>
+      <input class="informationsTypeTitle" type="text" name="" value="">
+    </div>
+    <div class="informationsElement">
+      <h4 class="informationsTitle">Insérer le titre du contenu</h4>
+      <input class="informationsContentTitle" type="text" name="" value="">
+    </div>
+  </section>
+  <section id="div" class="preview">
+    <div class="previewOverlay"></div>
+    <div class="previewTexts">
+      <h2 class="previewTypeTitle">Actualité</h2>
+      <h3 class="previewTitle">Les rééditions : business florissant au détriment de l’art</h3>
+    </div>
+    <img id="previewBackgroundImage" class="previewBackgroundImage" src="" alt="">
+  </section>
+  </div>
+  <div class="buttonContainer">
+    <button class="downloadButton" id="button" type="button" name="button">Télécharger l'image</button>
+  </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+<script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+<script type="text/javascript">
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        $('#previewBackgroundImage').attr('src', e.target.result);
+      };
+      reader.readAsDataURL(input.files[0]); // convert to base64 string
+    };
+  };
+  $("#informationsImage").change(function() {
+    readURL(this);
+  });
+  $(document).ready(function(){
+    $("#button").click(function(){
+      domtoimage.toBlob(document.getElementById('div')).then(function(blob){
+        window.saveAs(blob, "output.png");
+      });
+    });
+  });
+  var previewTypeTitle = document.querySelector('.previewTypeTitle');
+  var informationsTypeTitle = document.querySelector('.informationsTypeTitle');
+  informationsTypeTitle.addEventListener('blur', function() {
+    previewTypeTitle.innerText = informationsTypeTitle.value;
+  });
+  var previewTitle = document.querySelector('.previewTitle');
+  var informationsContentTitle = document.querySelector('.informationsContentTitle');
+  informationsContentTitle.addEventListener('blur', function() {
+    previewTitle.innerText = informationsContentTitle.value;
+  });
+</script>
+</html>

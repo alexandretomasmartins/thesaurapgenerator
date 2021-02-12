@@ -1,0 +1,102 @@
+@import "reset.css";
+@import "fonts.css";
+
+.header {
+  margin: 40px 128px;
+  display: flex;
+  justify-content: center;
+}
+
+.headerTitle {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.headerNavigationElement {
+  font-family: Arial;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.headerNavigationLink {
+  text-decoration: none;
+  color: #000;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.informations {
+  margin: 0px 128px;
+}
+
+.informationsElement {
+  margin-bottom: 24px;
+}
+
+.informationsTitle {
+  margin-bottom: 8px;
+}
+
+.preview {
+  /* margin: 40px 128px 0 128px; */
+  position: relative;
+  margin-bottom: 24px;
+  width: 1080px;
+  height: 1080px;
+  background-color: grey;
+}
+
+.previewTexts {
+  width: 100%;
+  position: absolute;
+  bottom: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.previewTypeTitle {
+  font-family: Helvetica;
+  font-weight: lighter;
+  color: #fff;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.previewTitle {
+  font-family: "Aleo-Bold";
+  color: #fff;
+  font-size: 56px;
+  text-align: center;
+  line-height: 64px;
+}
+
+.previewOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,0) 65%, rgba(0,0,0,1) 100%);
+}
+
+.previewBackgroundImage {
+  width: 1080px;
+  height: 1080px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.buttonContainer {
+  margin-bottom: 64px;
+  display: flex;
+  justify-content: center;
+}
