@@ -8,7 +8,7 @@
 }
 
 .headerTitle {
-  font-family: "Aktiv-Grotesk";
+  font-family: Arial;
   font-weight: bold;
   font-size: 18px;
   text-transform: uppercase;
@@ -64,7 +64,7 @@
 }
 
 .previewTypeTitle {
-  font-family: Helvetica;
+  font-family: "Aktiv-Grotesk";
   font-weight: lighter;
   color: #fff;
   font-size: 40px;
