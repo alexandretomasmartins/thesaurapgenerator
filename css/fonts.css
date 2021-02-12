@@ -1,9 +1,9 @@
 @font-face {
-  font-family: "Aktiv-Grotesk-Light";
-  src: url('../fonts/AktivGrotesk_Lt.ttf');
+font-family: "Aktiv-Grotesk";
+src: url("https://alexandretomasmartins.github.io/thesaurapgenerator/fonts/AktivGrotesk_Lt.ttf");
 }
 
 @font-face {
-  font-family: "Aleo-Bold";
-  src: url('../fonts/Aleo-Bold.ttf');
+font-family: "Aleo";
+src: url("https://alexandretomasmartins.github.io/thesaurapgenerator/fonts/Aleo-Bold.ttf");
 }
