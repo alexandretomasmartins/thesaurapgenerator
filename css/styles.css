@@ -2,15 +2,15 @@
 @import "fonts.css";
 
 .header {
-  margin: 40px 128px;
+  margin: 24px 0;
   display: flex;
   justify-content: center;
 }
 
 .headerTitle {
-  font-family: Arial;
+  font-family: "AktivGrotesk-Black";
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
   text-transform: uppercase;
 }
 
@@ -44,7 +44,6 @@
 }
 
 .preview {
-  /* margin: 40px 128px 0 128px; */
   position: relative;
   margin-bottom: 24px;
   width: 1080px;
