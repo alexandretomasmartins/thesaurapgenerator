@@ -58,13 +58,11 @@
   $("#informationsImage").change(function() {
     readURL(this);
   });
-  $(document).ready(function(){
     $("#button").click(function(){
       domtoimage.toBlob(document.getElementById('div')).then(function(blob){
         window.saveAs(blob, "output.png");
       });
     });
-  });
   var previewTypeTitle = document.querySelector('.previewTypeTitle');
   var informationsTypeTitle = document.querySelector('.informationsTypeTitle');
   informationsTypeTitle.addEventListener('blur', function() {
