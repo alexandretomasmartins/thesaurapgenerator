@@ -60,11 +60,9 @@
   });
   $(document).ready(function(){
     $("#button").click(function(){
-      setTimeout(function(){
       domtoimage.toBlob(document.getElementById('div')).then(function(blob){
         window.saveAs(blob, "output.png");
       });
-    }, 10000);
     });
   });
   var previewTypeTitle = document.querySelector('.previewTypeTitle');
