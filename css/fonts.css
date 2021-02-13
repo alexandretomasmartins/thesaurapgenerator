@@ -3,7 +3,9 @@ font-family: "AktivGrotesk";
 src: url("https://alexandretomasmartins.github.io/thesaurapgenerator/fonts/AktivGrotesk_Lt.ttf");
 }
 
-@font-face {
+/* @font-face {
 font-family: "Aleo";
 src: url("https://alexandretomasmartins.github.io/thesaurapgenerator/fonts/Aleo-Bold.ttf");
-}
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@700&display=swap');
