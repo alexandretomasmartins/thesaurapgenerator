@@ -10,7 +10,7 @@
 .headerTitle {
   font-family: "AktivGrotesk-Black";
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -33,7 +33,25 @@
 }
 
 .informations {
-  margin: 0px 128px;
+  width: 85%;
+}
+
+.informationsImage {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px dashed #bfbfbf;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.informationsTypeTitle {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.informationsContentTitle {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .informationsElement {
@@ -41,6 +59,7 @@
 }
 
 .informationsTitle {
+  font-family: "AktivGrotesk-Regular";
   margin-bottom: 8px;
 }
 

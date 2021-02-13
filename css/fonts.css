@@ -8,4 +8,9 @@ font-family: "AktivGrotesk-Black";
 src: url("../fonts/AktivGrotesk_Blk.ttf");
 }
 
+@font-face {
+font-family: "AktivGrotesk-Regular";
+src: url("../fonts/AktivGrotesk_Rg.ttf");
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Aleo:wght@700&display=swap');
