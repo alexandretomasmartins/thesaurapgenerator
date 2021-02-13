@@ -42,7 +42,6 @@
   </div>
 
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/1.1.0/dom-to-image.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.2.2/FileSaver.min.js"></script>
 <script type="text/javascript">
@@ -50,19 +49,21 @@
     if (input.files && input.files[0]) {
       var reader = new FileReader();
       reader.onload = function(e) {
-        $('#previewBackgroundImage').attr('src', e.target.result);
+        document.querySelector('.previewBackgroundImage').setAttribute('src', e.target.result);
       };
       reader.readAsDataURL(input.files[0]); // convert to base64 string
     };
   };
-  $("#informationsImage").change(function() {
-    readURL(this);
-  });
-    $("#button").click(function(){
-      domtoimage.toBlob(document.getElementById('div')).then(function(blob){
-        window.saveAs(blob, "output.png");
-      });
+    document.querySelector(".informationsImage").addEventListener('change', function() {
+      console.log('hello');
+      readURL(this);
     });
+      document.querySelector(".downloadButton").addEventListener('click', function(){
+        console.log("ça marche");
+        domtoimage.toBlob(document.getElementById('div')).then(function(blob){
+          window.saveAs(blob, "output.png");
+        });
+      });
   var previewTypeTitle = document.querySelector('.previewTypeTitle');
   var informationsTypeTitle = document.querySelector('.informationsTypeTitle');
   informationsTypeTitle.addEventListener('blur', function() {
