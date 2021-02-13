@@ -60,7 +60,7 @@
     });
       document.querySelector(".downloadButton").addEventListener('click', function(){
         console.log("ça marche");
-        domtoimage.toBlob(document.getElementById('div')).then(function(blob){
+        domtoimage.toBlob(document.querySelector('.preview')).then(function(blob){
           window.saveAs(blob, "output.png");
         });
       });
