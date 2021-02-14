@@ -74,7 +74,8 @@
   var previewTitle = document.querySelector('.previewTitle');
   var informationsContentTitle = document.querySelector('.informationsContentTitle');
   informationsContentTitle.addEventListener('blur', function() {
-    previewTitle.innerText = informationsContentTitle.value;
+    previewTitle.innerHTML = informationsContentTitle.value;
   });
+  // var previewTitleContainer = document.querySelector('.previewTitle');
 </script>
 </html>
