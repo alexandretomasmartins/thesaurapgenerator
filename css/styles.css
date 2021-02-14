@@ -46,11 +46,13 @@
 
 .informationsTypeTitle {
   width: 100%;
+  height: 32px;
   box-sizing: border-box;
 }
 
 .informationsContentTitle {
   width: 100%;
+  height: 32px;
   box-sizing: border-box;
 }
 
